@@ -12,6 +12,7 @@ import { EnrolleeDialogComponent } from './enrollees-list/enrollee-dialog/enroll
 import { EnrolleePipe } from './enrollees-list/enrollee.pipe';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,9 @@ import { EnrolleePipe } from './enrollees-list/enrollee.pipe';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule
+  ],
+  entryComponents: [
+    EnrolleeDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
