@@ -1,0 +1,17 @@
+
+<section class="enrollees-section">
+  <h1 class="heading">Enrollee List</h1>
+  <!-- Drop Down to Filter the EnrolleList based on Status - Active ot In Active -->
+  <div class="filter-box">
+      <mat-form-field appearance="fill">
+          <mat-label>Filter by Status</mat-label>
+          <mat-select [(value)]="selected">
+            <mat-option value="ALL">ALL</mat-option>
+            <mat-option value="ACTIVE">ACTIVE</mat-option>
+            <mat-option value="INACTIVE">IN ACTIVE</mat-option>
+          </mat-select>
+        </mat-form-field>
+  </div>
+  <!-- Enrollee List Grid  -->
+<app-enrollee *ngFor="let enrollee of enrollees | enrollee : selected " [enrollee]="enrollee" (recordUpdated)="onRecordUpdated()"></app-enrollee>
+</section>

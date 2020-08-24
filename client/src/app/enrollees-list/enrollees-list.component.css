@@ -1,0 +1,25 @@
+.enrollees-section{
+  width: 100%;
+  margin: auto;
+}
+.heading {
+  text-align: center;
+}
+.filter-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+@media(min-width: 960px ){
+  .enrollees-section{
+  width: 80%;
+  }
+}
+
+
+@media(min-width: 1280px ){
+  .enrollees-section{
+  width: 60%;
+  }
+}
+

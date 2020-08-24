@@ -1,0 +1,20 @@
+
+.card-item{
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.active {
+  background-color: rgb(113, 218, 113);
+  font-weight: bold;
+  color: white;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.inactive {
+  background-color:rgba(255, 187, 0, 0.822);
+  font-weight: bold;
+  color: white;
+  padding: 6px;
+  border-radius: 6px;
+}
