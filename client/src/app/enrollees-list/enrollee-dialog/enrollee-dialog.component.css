@@ -1,0 +1,12 @@
+.full-width {
+  width: 100%;
+}
+.btn-box {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+}
+.header{
+  display: flex;
+  justify-content: center;
+}

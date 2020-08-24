@@ -1,9 +1,9 @@
 <!-- Simple card feature to show the Enrollee Details -->
 <div (click)="openFormDialog(enrollee.id)"><mat-card class="card-item" >
   <mat-card-content>
-      <mat-card-title>{{enrollee.name}}</mat-card-title>
+      <mat-card-title class="enrollee-name">{{enrollee.name}}</mat-card-title>
       <mat-card-subtitle>{{enrollee.id}}</mat-card-subtitle>
-      <p >Date Of Birth: <span *ngIf="enrollee.dateOfBirth">{{enrollee.dateOfBirth}}</span> <span *ngIf="!enrollee.dateOfBirth">N/A</span>  </p>
+      <p >Date Of Birth: <span *ngIf="enrollee.dateOfBirth">{{enrollee.dateOfBirth | date: 'mediumDate'}}</span> <span *ngIf="!enrollee.dateOfBirth">N/A</span>  </p>
       <span class="active" *ngIf="enrollee.active">ACTIVE</span>
       <span class="inactive" *ngIf="!enrollee.active">IN ACTIVE</span>
   </mat-card-content>

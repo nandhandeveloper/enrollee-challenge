@@ -1,1 +1,23 @@
-<p>enrollee-dialog works!</p>
+<div class="header"><h2>Enrollee Update Form</h2></div>
+<form novalidate [formGroup]="enrolleeForm" class="full-width">
+  <div>
+    <mat-form-field class="full-width">
+      <input matInput formControlName="name" placeholder="Your Good Name">
+      <mat-error *ngIf="enrolleeForm.get('name').touched && !enrolleeForm.get('name').valid  && enrolleeForm.get('name').errors && enrolleeForm.get('name').errors.required">This field is required!!</mat-error>
+      <mat-error *ngIf="enrolleeForm.get('name').touched && !enrolleeForm.get('name').valid  && enrolleeForm.get('name').errors && enrolleeForm.get('name').errors.minlength">Mininum 3 characters required</mat-error>
+      <mat-error *ngIf="enrolleeForm.get('name').touched && !enrolleeForm.get('name').valid  && enrolleeForm.get('name').errors && enrolleeForm.get('name').errors.maxlength">Maximim 100 characters allowed</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="full-width">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option *ngFor="let stat of status" value="{{stat.value}}">{{stat.label}}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="enrolleeForm.get('status').touched && !enrolleeForm.get('status').valid  && enrolleeForm.get('status').errors && enrolleeForm.get('status').errors.required">This field is required!!</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="btn-box">
+    <button type="button" mat-raised-button color="primary" [disabled]="!enrolleeForm.valid || isButtonDisabled" (click)="onSubmit()">Update</button>
+  </div>
+</form>

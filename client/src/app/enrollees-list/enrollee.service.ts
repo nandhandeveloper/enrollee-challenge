@@ -26,5 +26,12 @@ export class EnrolleeService {
   getEnrolleeDetails(id: string): Observable<Enrollee> {
     return this.http.get<Enrollee>(`http://localhost:8080/enrollees/${id}`);
   }
-
+  /**
+   * Updates the selected Enrollee
+   * @param data Object - the updatedData
+   * @param id string  - the uuid
+   */
+  updateEnrollee(data: Enrollee, id: string): Observable<Enrollee> {
+    return this.http.put<Enrollee>(`http://localhost:8080/enrollees/${id}`, {...data});
+  }
 }

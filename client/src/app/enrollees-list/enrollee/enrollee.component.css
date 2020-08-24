@@ -3,6 +3,9 @@
   margin-top: 1rem;
   cursor: pointer;
 }
+.card-item:hover{
+  background-color: rgb(223, 222, 222);
+}
 .active {
   background-color: rgb(113, 218, 113);
   font-weight: bold;
@@ -17,4 +20,8 @@
   color: white;
   padding: 6px;
   border-radius: 6px;
+}
+
+.enrollee-name {
+  font-size: 1.2rem;
 }
